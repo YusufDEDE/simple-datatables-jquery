@@ -21,6 +21,15 @@
 	
 $(document).ready(function() {
 	$('table.display').DataTable();
+    $('#jsondata').DataTable( {
+    data: data,
+    columns: [
+        { data: 'name' },
+        { data: 'position' },
+        { data: 'salary' },
+        { data: 'office' }
+    ]
+} );
 } );
 
 	</script>
@@ -33,7 +42,7 @@ $(document).ready(function() {
 				
 			</div>
 			<div class="demo-html"></div>
-			<table id="" class="display container" style="width:100%">
+			<table id="jsondata" class="display container" style="width:100%">
 				<thead>
 					<tr>
 						<th>Name</th>
